@@ -1,0 +1,48 @@
+<app-navegate-map>
+  <strong><span class="text-muted">Dashboard</span>
+    <i class="bi bi-chevron-right"></i>
+    <span class="app-primary-color">Contatos</span></strong>
+</app-navegate-map>
+
+<div class="" style="overflow-y: scroll;overflow-x: hidden; height: 100%;">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Remover Categoria</h5>
+          <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <small>Tem Certeza que deseja Remover o Contato</small>
+          <strong *ngIf="name ;" > {{ name}}</strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="remove()" >Remover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6"></div>
+    <div class="col-6 d-flex justify-content-end px-4"><app-btn-new></app-btn-new></div>
+  </div>
+
+  <ul *ngIf="contacts.length > 0 ; else default" class="list-unstyled" style="overflow-x: hidden;height: calc(100% - 140px)">
+    <li *ngFor="let contact of contacts" class="row no-gutters p-0">
+
+      <app-card>
+        <app-contact  (remove_contact)="add_contact($event)" [contact]="contact"></app-contact>
+      </app-card>
+
+    </li>
+  </ul>
+
+  <ng-template #default >
+    <p class="text-center text-muted" >
+      Sorry, no product
+    </p>
+  </ng-template>
+</div>
+

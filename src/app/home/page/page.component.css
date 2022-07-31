@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Oswald:wght@200&display=swap');
+.banner-principal{
+  background-image: url("../../../assets/imager-home/baner-principal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.carousel-arrow{
+  border-radius: 0 !important;
+}
+.carousel-cell {
+  /*transform: translateX(310px)!important;*/
+}
+
+.font-oswald{
+  font-family: Oswald;
+}
+
+.zoom{
+  overflow: hidden;
+}
+
+.zoom img{
+  max-width: 100%;
+  transition: all .3s;
+}
+
+.zoom:hover img{
+  transform: scale(1.1) rotate(5deg);
+}
+
+input[type=radio] + img{
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+input[type=radio]:checked + img{
+  opacity:1.0 !important;
+}
+
+.color-select:hover{
+  transform: translatey(-5px);
+  transition-duration: .5s;
+}
+
+.btn-view-more{
+  background: linear-gradient(to right,orangered, darkorange, orange, yellow);
+  font-family: Montserrat , sans-serif;
+  font-weight: bold;
+}

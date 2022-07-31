@@ -1,0 +1,60 @@
+<div class="container-fluid h-100" style="background: #ff9029">
+  <div class="row" style="height: 100vh">
+    <div class="col-md-2 px-0  h-100">
+      <nav class="navbar px-0 w-100 h-100 align-items-start px-0 position-relative">
+      <div id="nav-collapse" is-nav class="w-100 h-100" >
+        <nav class="h-100">
+          <div class="justify-content-between h-100 d-flex flex-column px-0">
+            <div class="">
+              <div class="px-2 mb-5 mt-2 d-none d-md-block text-center" >
+                <h4>Agenda de Contatos </h4>
+              </div>
+              <ul class="list-group w-100 h-100 menu-dashboard">
+                <li class="list-group-item px-0 bg-transparent border-0">
+                  <a class="ms-4 text-dark text-decoration-none" routerLinkActive="active"  [routerLink]="['/dashboard']">
+                    <i class="bi bi-graph-up dashboard-ico"></i>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="list-group-item px-0 bg-transparent border-0">
+                  <a class="ms-4 text-dark text-decoration-none" routerLinkActive="active" [routerLink]="['contact']">
+                    <i class="bi bi-person-lines-fill dashboard-ico"></i>
+                    Contatos
+                  </a>
+                </li>
+                <li class="list-group-item px-0 bg-transparent border-0">
+                  <a class="ms-4 text-dark text-decoration-none"  routerLinkActive="active"  [routerLink]="['contact/form']">
+                    <i class="bi bi-person-plus-fill dashboard-ico"></i>
+                    Novo Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="list-group w-100">
+                <li class="list-group-item bg-transparent border-0">
+                  <span style="font-size: 20px">© <strong>< f/m ></strong> <small class="ms-2">D. web</small></span>
+                  <span class="mx-2"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      </nav>
+    </div>
+    <div class="col-md-10 pt-1 position-relative" style="background: white">
+      <div class="d-flex justify-content-between align-items-end" style="height: 100px">
+        <div></div>
+
+      </div>
+      <div class="dashboard-container border">
+        <ap-alert></ap-alert>
+        <app-navegate-map>
+          <strong><span style="">Dashboard</span></strong>
+        </app-navegate-map>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

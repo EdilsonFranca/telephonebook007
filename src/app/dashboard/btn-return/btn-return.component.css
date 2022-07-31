@@ -1,0 +1,23 @@
+.div-ball{
+  z-index: 100;
+  transition:.5s;
+}
+
+.div-ball span {
+  width: 50px;
+  height: 70px
+}
+
+.ball-box{
+  left: -35px;
+  top: -87px;
+}
+
+.ball-ico{
+  left: -36px;
+  top: 2px;
+  fill: #FFF;
+  background-color: orange;
+  z-index:200;
+  transition:.5s;
+}
