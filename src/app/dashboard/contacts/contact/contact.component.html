@@ -7,21 +7,26 @@
   </div>
   <div class="text-start d-flex justify-content-between align-items-center" style="width: calc(100% - 90px)">
     <div class="flex-column ms-2">
-      <p class="m-0"><strong class="me-2">{{ contact.name| uppercase }}</strong></p>
-      <p class="m-0 d-flex ">
-        <i class="bi bi-telephone me-2"></i>
-        <span class="me-2">{{ contact.phones[0].number }}</span> <span *ngIf="contact.phones[1]">  / {{ contact.phones[1].number }}</span>
-      </p>
+      <p class="m-0 text-center"><strong class="me-2">{{ contact.name| uppercase }}</strong></p>
+      <div class="m-0 d-flex ">
+        <i class="bi bi-telephone me-2 h2" ></i>
+        <div class="d-flex flex-column flex-md-row">
+           <span class="me-2">{{ contact.phones[0].number }}</span> <span class="d-flex" *ngIf="contact.phones[1]"><strong class="d-none d-md-block me-2">/ </strong> {{ contact.phones[1].number }}</span>
+        </div>
+
+      </div>
     </div>
-    <div>
+    <div class="text-center">
       <span>
         <a [routerLink]="[contact.id]">
              <i class="bi bi-pencil-square" style="font-size: 19px;color: cornflowerblue"></i>
         </a>
-        <span (click)="openModal(contact)" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="bi bi-trash m-2" style="font-size: 19px;color: red"></i>
-        </span>
       </span>
+
+      <span (click)="openModal(contact)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="bi bi-trash m-2" style="font-size: 19px;color: red"></i>
+      </span>
+
     </div>
   </div>
 </div>

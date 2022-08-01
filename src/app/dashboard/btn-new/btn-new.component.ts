@@ -5,9 +5,4 @@ import {Component, OnInit} from '@angular/core';
     templateUrl: './btn-new.component.html',
     styleUrls: ['./btn-new.component.css']
 })
-export class BtnNewComponent implements OnInit {
-    constructor() {}
-
-    ngOnInit() {}
-
-}
+export class BtnNewComponent  {}
