@@ -52,7 +52,7 @@
           <div class="mb-3">
             <div class="">
               <div class="d-flex justify-content-between">
-                <label for="formName" class="form-label text-muted">Telefone</label>
+                <label for="formName" class="form-label text-muted">Telefones</label>
               </div>
               <div class="d-flex flex-column align-items-end" id="number-box" formArrayName="phones">
                 <input *ngFor="let phone of contact.phones ; index as i" type="text" class="form-control mt-1" [formControlName]="i" [value]="phone" style="min-width: 50px">

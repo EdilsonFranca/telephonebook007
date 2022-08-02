@@ -10,6 +10,8 @@ import {ContactService} from "../../contact/contact.service";
 export class ContactsComponent {
 
   @Input() contacts: any;
+  filter: string = '';
+
   // @ts-ignore
   name!: String;
   private id!: number;

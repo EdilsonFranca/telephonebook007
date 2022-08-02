@@ -10,6 +10,7 @@ import {Contact} from "../contact/contact.model";
 export class ContactListComponent implements OnInit {
 
   contacts: Contact[] = [];
+
   constructor(
     private activatedRoute: ActivatedRoute,
   ) {}

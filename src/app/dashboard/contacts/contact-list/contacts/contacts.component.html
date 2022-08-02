@@ -25,13 +25,15 @@
   </div>
 
   <div class="row">
-    <div class="col-6"></div>
+    <div class="col-6">
+      <app-search (onTyping)="filter = $event" [value]="filter"></app-search>
+    </div>
     <div class="col-6 d-flex justify-content-end px-4">
       <app-btn-new></app-btn-new></div>
-  </div>
+    </div>
 
-  <ul *ngIf="contacts.length > 0 ; else default" class="list-unstyled" style="overflow-x: hidden;overflow-y: scroll;height: calc(100vh - 190px)">
-    <li *ngFor="let contact of contacts" class="row no-gutters p-0">
+    <ul *ngIf="contacts.length > 0 ; else default" class="list-unstyled" style="overflow-x: hidden;overflow-y: scroll;height: calc(100vh - 190px)">
+    <li *ngFor="let contact of contacts | filterByDescription: filter" class="row no-gutters p-0">
 
       <app-card>
         <app-contact  (remove_contact)="add_contact($event)" [contact]="contact"></app-contact>

@@ -8,6 +8,8 @@ import {ContactListComponent} from "./contact-list.component";
 import {ContactsComponent} from "./contacts/contacts.component";
 import {CardModule} from "../../shared/components/card/card.module";
 import {ContactModule} from "../contact/contact.module";
+import {SearchComponent} from "./contacts/search/search.component";
+import {FilterByDescription} from "./filter-by-description.pipe";
 
 
 @NgModule({
@@ -21,8 +23,10 @@ import {ContactModule} from "../contact/contact.module";
     ContactModule
   ],
     declarations: [
-      ContactListComponent,
-      ContactsComponent,
+        ContactListComponent,
+        ContactsComponent,
+        SearchComponent,
+        FilterByDescription,
     ]
 })
 
