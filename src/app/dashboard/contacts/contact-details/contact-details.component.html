@@ -1,11 +1,10 @@
 <div class="">
   <app-navegate-map>
-    <strong><span class="text-muted">Dashboard</span>
-      <i class="bi bi-chevron-right"></i><span class="text-muted">Contato</span>
+    <strong><span class="text-muted">Contato</span>
       <i class="bi bi-chevron-right"></i>
       <span class="app-primary-color">Editar</span></strong>
   </app-navegate-map>
-  <app-btn-return [url_return]="'/dashboard/contact'"></app-btn-return>
+  <app-btn-return [url_return]="'/'"></app-btn-return>
   <div class="">
     <form *ngIf="this.contact.name" [formGroup]="contactForm" class="d-flex py-4"  (submit)="upload_edit()" id="previewImageForm">
       <div class="row">

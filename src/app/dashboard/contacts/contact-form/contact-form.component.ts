@@ -4,7 +4,7 @@ import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angul
 import {ActivatedRoute, Router} from '@angular/router';
 import {Contact} from "../contact/contact.model";
 import {ContactService} from "../contact/contact.service";
-import {AlertService} from "../../shared/components/alert/alert.service";
+import {AlertService} from "../../../shared/components/alert/alert.service";
 
 @Component({
   selector: 'app-contact-form',

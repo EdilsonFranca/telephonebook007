@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import {DashboardComponent} from './dashboard.component';
 import {RouterModule} from '@angular/router';
 import {DashboardRoutingModule} from './dashboard.routing.module';
-import {NavegateMapModule} from './navegate-map/navegate-map.module';
+import {NavegateMapModule} from '../navegate-map/navegate-map.module';
 import {ContactsModule} from "./contacts/contact.module";
-import {AlertModule} from "./shared/components/alert/alert.module";
+import {AlertModule} from "../shared/components/alert/alert.module";
 
 @NgModule({
     imports: [

@@ -1,0 +1,55 @@
+<div class="">
+  <div class="p-3 d-flex flex-column list-group-item mx-3 position-relative" style="margin-top: 55px; height: calc(100vh - 180px);border: 2px solid #455a64;background: #FF9029">
+    <div class="row">
+      <div class="col-md-6 p-3">
+        <form *ngIf="loginForm" [formGroup]="loginForm" class="form px-3 py-3 rounded" (submit)="login()" style="background: #fff;">
+          <h3 class="text-center">Login</h3>
+          <div class="form-group mb-4">
+            <label for="formEmail" style="color: #FF9029" class="form-label">E-mail</label>
+            <input #userNameInput
+                   id="formEmail"
+                   formControlName="userName"
+                   class="form-control"
+                   autofocus>
+            <ap-vmessage
+              *ngIf="loginForm.get('userName')?.errors?.['required']"
+              text="User name is required!">
+            </ap-vmessage>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="formPassword" style="color: #FF9029" class="form-label">Senha</label>
+            <input
+              id="formPassword"
+              formControlName="password"
+              type="password"
+              class="form-control">
+            <ap-vmessage
+              *ngIf="loginForm.get('password')?.errors?.['required']"
+              text="Password is required!">
+            </ap-vmessage>
+          </div>
+
+          <button
+            [disabled]="loginForm.invalid"
+            type="submit"
+            class="btn btn-primary btn-block">
+            login
+          </button>
+          <div>
+            <small>email :teste@gmail.com</small><br>
+            <small>senha :12345678</small>
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+        <svg  width="270" height="270" fill="#696969" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+          <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+          <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

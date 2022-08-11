@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Contact} from "../contact/contact.model";
 import {ContactService} from "../contact/contact.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {AlertService} from "../../shared/components/alert/alert.service";
+import {AlertService} from "../../../shared/components/alert/alert.service";
 
 @Component({
   selector: 'app-product-details',

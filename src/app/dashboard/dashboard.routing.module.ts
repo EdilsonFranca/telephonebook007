@@ -5,7 +5,7 @@ import {ContactDetailsComponent} from "./contacts/contact-details/contact-detail
 import {ContactFormComponent} from "./contacts/contact-form/contact-form.component";
 import {ContactListResolver} from "./contacts/contact-list/contact-list.resolver";
 import {ContactListComponent} from "./contacts/contact-list/contact-list.component";
-import { DashboardDataComponent} from "./dashboard-data/dashboard-data.component";
+import {AuthGuard} from "../core/auth/auth.guard";
 
 
 const routes: Routes = [
@@ -15,21 +15,20 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardDataComponent,
-      },
-      {
-        path: 'contact',
+        canActivate: [AuthGuard],
         component: ContactListComponent,
         resolve: {
           contacts: ContactListResolver
         },
       },
       {
-        path: 'contact/form',
+        path: 'form',
+        canActivate: [AuthGuard],
         component: ContactFormComponent,
       },
       {
-        path: 'contact/:id',
+        path: ':id',
+        canActivate: [AuthGuard],
         component: ContactDetailsComponent,
       },
     ]

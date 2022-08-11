@@ -11,19 +11,13 @@
               </div>
               <ul class="list-group w-100 h-100 menu-dashboard">
                 <li class="list-group-item px-0 bg-transparent border-0">
-                  <a class="ms-4 text-dark text-decoration-none" routerLinkActive="active"  [routerLink]="['/dashboard']">
-                    <i class="bi bi-graph-up dashboard-ico"></i>
-                    Dashboard
-                  </a>
-                </li>
-                <li class="list-group-item px-0 bg-transparent border-0">
-                  <a class="ms-4 text-dark text-decoration-none" routerLinkActive="active" [routerLink]="['contact']">
+                  <a class="ms-4 text-dark text-decoration-none" routerLinkActive="active" [routerLink]="['']">
                     <i class="bi bi-person-lines-fill dashboard-ico"></i>
                     Contatos
                   </a>
                 </li>
                 <li class="list-group-item px-0 bg-transparent border-0">
-                  <a class="ms-4 text-dark text-decoration-none"  routerLinkActive="active"  [routerLink]="['contact/form']">
+                  <a class="ms-4 text-dark text-decoration-none"  routerLinkActive="active"  [routerLink]="['/form']">
                     <i class="bi bi-person-plus-fill dashboard-ico"></i>
                     Novo Contato
                   </a>
@@ -44,14 +38,17 @@
       </nav>
     </div>
     <div class="col-md-10 h-100 pt-1 position-relative" style="background: white">
+
       <div class="d-flex justify-content-between align-items-end" style="height: 100px">
         <div></div>
       </div>
+      <div *ngIf="(user$ | async) as user;" class="float-end login" style="margin-top: -20px;cursor: pointer">
+        <a class="mr-1">{{ user.name}}</a>
+        <span (click)="logout()">Sair</span>
+      </div>
+
       <div class="dashboard-container border mb-3">
         <ap-alert></ap-alert>
-        <app-navegate-map>
-          <strong><span style="">Dashboard</span></strong>
-        </app-navegate-map>
         <router-outlet></router-outlet>
       </div>
     </div>

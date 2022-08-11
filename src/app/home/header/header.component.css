@@ -1,5 +1,0 @@
-.nav-link:hover {
-  background: linear-gradient(to right,orangered, darkorange, orange, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
